@@ -3,9 +3,19 @@ entries:
   machine-group:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-01-12T02:39:56.369858592+03:00"
+    created: "2023-01-12T02:49:17.118962447+03:00"
     description: machine configuration tool for kubernetes
-    digest: 3e546d27bacd8edbfae1394c24874cdf3222ae9029efb76bd7183b49f0d7c7ea
+    digest: 8c1fe6c058c1493803b08b1d05723bff1af59f0ec924f1b529e40fb78770c904
+    name: machine-group
+    type: application
+    urls:
+    - https://helm.fraima.io/machine-group-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2023-01-12T02:49:17.116926136+03:00"
+    description: machine configuration tool for kubernetes
+    digest: a45cdead46aa8c9c80843d26be54f149a2e200c43d59aa9a02103d3e9cb08a38
     name: machine-group
     type: application
     urls:
@@ -13,7 +23,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-01-12T02:39:56.367691564+03:00"
+    created: "2023-01-12T02:49:17.114756124+03:00"
     description: machine configuration tool for kubernetes
     digest: be75d50cde945018bfb1318734f9f78ea6b5b2e9cafee2c1e8060e696dbc2b6f
     name: machine-group
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://helm.fraima.io/machine-group-0.1.0.tgz
     version: 0.1.0
-generated: "2023-01-12T02:39:56.349569621+03:00"
+generated: "2023-01-12T02:49:17.104771697+03:00"
