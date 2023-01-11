@@ -1,14 +1,14 @@
 apiVersion: v1
 entries:
-  helm-chart-test:
+  machine-group:
   - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-01-06T20:13:30.619965188+03:00"
-    description: A Helm chart for Kubernetes
-    digest: 0bc8097ef0570904aa2fb78d96fd9c43347ece7b7c230505906b9d3e598b92ed
-    name: helm-chart-test
+    appVersion: 0.0.1
+    created: "2023-01-11T03:44:42.526726081+03:00"
+    description: machine configuration tool for kubernetes
+    digest: be75d50cde945018bfb1318734f9f78ea6b5b2e9cafee2c1e8060e696dbc2b6f
+    name: machine-group
     type: application
     urls:
-    - https://github.com/fraima/fraima-charts/helm-chart-test-0.1.0.tgz
+    - https://helm.fraima.io/fraima-charts/machine-group-0.1.0.tgz
     version: 0.1.0
-generated: "2023-01-06T20:13:30.609583785+03:00"
+generated: "2023-01-11T03:44:42.515361622+03:00"
