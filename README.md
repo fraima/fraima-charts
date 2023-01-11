@@ -20,3 +20,14 @@ helm repo index --url https://helm.fraima.io/fraima-charts/ .
 git add . && git commit -m “Initial commit” && git push origin master
 
 ```
+
+### Helm repo  add/update
+```bash
+helm repo add fraima helm.fraima.io
+helm repo update fraima
+```
+
+### Helm search  add/update
+```bash
+helm search repo fraima
+```
