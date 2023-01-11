@@ -77,8 +77,8 @@ labels:
   {{- toYaml . | nindent 2 }}
 {{- end }}
 
-{{- with .Values.template.spec.networkInterfaces  }}
 networkInterfaceSpecs:
+{{- with .Values.template.spec.networkInterfaces  }}
 - assignPublicIPAddress: {{ .nat | default true }}
   subnetID: {{ .subnetID }}
 networkType: {{ .networkType | default "STANDARD" }}

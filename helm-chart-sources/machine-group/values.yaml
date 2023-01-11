@@ -1,3 +1,6 @@
+machineContoller:
+  namespace: fraima-ccm
+
 clusterUrl: example.com
 clusterPort: 443
 
@@ -30,7 +33,7 @@ template:
       coreFraction: 20
       memory: 8
 
-    network_interface:
+    networkInterface:
       nat: true
       subnetID: ""
       regionID: "ru-central1"
