@@ -3,9 +3,19 @@ entries:
   machine-group:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-01-12T05:08:45.408551822+03:00"
+    created: "2023-01-12T05:13:31.855759503+03:00"
     description: machine configuration tool for kubernetes
-    digest: 7255d470da8233861d37fb96e8abac1daf9da338a950a7feea027238aded7ea9
+    digest: ea2b91e558be928ab6bc98da59d5ce6072da5db4f0556e9d10b20c6d7fafb0f1
+    name: machine-group
+    type: application
+    urls:
+    - https://helm.fraima.io/machine-group-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2023-01-12T05:13:31.853745582+03:00"
+    description: machine configuration tool for kubernetes
+    digest: e340edaa2b327add3176a167f787387d887d570a8d493ebe588da321f14c09bb
     name: machine-group
     type: application
     urls:
@@ -13,7 +23,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-01-12T05:08:45.406596273+03:00"
+    created: "2023-01-12T05:13:31.851799397+03:00"
     description: machine configuration tool for kubernetes
     digest: ae2b1e626c14ab30b3593a267ee893abcae2c118fa5c2f32ac20c3ffe34211d6
     name: machine-group
@@ -23,7 +33,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-01-12T05:08:45.404611619+03:00"
+    created: "2023-01-12T05:13:31.84979867+03:00"
     description: machine configuration tool for kubernetes
     digest: a45cdead46aa8c9c80843d26be54f149a2e200c43d59aa9a02103d3e9cb08a38
     name: machine-group
@@ -33,7 +43,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-01-12T05:08:45.402449243+03:00"
+    created: "2023-01-12T05:13:31.847637874+03:00"
     description: machine configuration tool for kubernetes
     digest: be75d50cde945018bfb1318734f9f78ea6b5b2e9cafee2c1e8060e696dbc2b6f
     name: machine-group
@@ -41,4 +51,4 @@ entries:
     urls:
     - https://helm.fraima.io/machine-group-0.1.0.tgz
     version: 0.1.0
-generated: "2023-01-12T05:08:45.392495296+03:00"
+generated: "2023-01-12T05:13:31.837546688+03:00"
