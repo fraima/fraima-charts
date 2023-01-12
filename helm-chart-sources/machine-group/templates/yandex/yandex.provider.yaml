@@ -323,7 +323,7 @@ stringData:
 
 kind: Secret
 metadata:
-  name: {{ .Release.Name }}
+  name: machine-class.{{ .Release.Name }}
   namespace: {{ .Release.Namespace }}
   annotations:
     "helm.sh/hook-weight": "1"

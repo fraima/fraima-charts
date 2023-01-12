@@ -98,7 +98,7 @@ resourcesSpec:
 schedulingPolicy: {}
 
 secretRef:
-  name: {{ .Release.Name }}
+  name: machine-class.{{ .Release.Name }}
   namespace: fraima-ccm
 
 {{- end }}
