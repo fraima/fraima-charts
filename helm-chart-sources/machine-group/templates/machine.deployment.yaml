@@ -4,7 +4,7 @@ apiVersion: machine.sapcloud.io/v1alpha1
 kind: MachineDeployment
 metadata:
   name: worker-{{ .Release.Name }}
-  namespace: fraima-ccm
+  namespace: {{ .Values.machineContoller.namespace | default "fraima-ccm" }}
   annotations:
     helm.sh/hook-weight: "5"
 spec:

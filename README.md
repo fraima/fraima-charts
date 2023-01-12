@@ -11,7 +11,7 @@ helm package helm-chart-sources/*
 
 ### Create the Helm chart repository index
 ```bash
-helm repo index --url https://helm.fraima.io/fraima-charts/ .
+helm repo index --url https://helm.fraima.io/ .
 
 ```
 

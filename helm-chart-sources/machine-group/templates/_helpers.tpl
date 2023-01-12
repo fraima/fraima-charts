@@ -99,7 +99,7 @@ schedulingPolicy: {}
 
 secretRef:
   name: machine-class.{{ .Release.Name }}
-  namespace: fraima-ccm
+  namespace: {{ .Values.machineContoller.namespace | default "fraima-ccm" }}
 
 {{- end }}
 
