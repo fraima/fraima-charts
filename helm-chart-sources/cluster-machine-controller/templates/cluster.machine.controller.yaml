@@ -47,7 +47,7 @@ spec:
                 apiVersion: v1
                 fieldPath: metadata.namespace
 
-        image: {{ .Values.containers.image }}
+        image: {{ .Values.controller.image }}
         imagePullPolicy: IfNotPresent
 
         readinessProbe:
