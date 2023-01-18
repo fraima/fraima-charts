@@ -43,6 +43,7 @@ stringData:
       - sudo sysctl --system
 
     runcmd:
+      - mkdir -p /etc/kubernetes/manifests
       - hostnamectl set-hostname  $(cat /proc/sys/kernel/hostname | awk -F '.' '{print $1}')
       - wget -O /usr/bin/fraimactl "https://storage.yandexcloud.net/m.images/fraimactl/fraima-main-v1?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YCAJEhOlYpv1GRY7hghCojNX5%2F20230109%2Fru-central1%2Fs3%2Faws4_request&X-Amz-Date=20230109T154222Z&X-Amz-Expires=2592000&X-Amz-Signature=16F593DF2BEC0189DB6F64FE9FC650D2B7F5425C689DE9DD9F4000BA72218F5C&X-Amz-SignedHeaders=host"
       - chmod +x /usr/bin/fraimactl
@@ -306,10 +307,6 @@ stringData:
           imageMinimumGCAge: 12h 
           imageGCHighThresholdPercent: 55
           imageGCLowThresholdPercent: 50
-
-      - path: /etc/kubernetes/manifests
-        owner: root:root
-        permissions: '0644'
 
       - path: /etc/kubernetes/pki/ca/kubernetes-ca.pem
         owner: root:root

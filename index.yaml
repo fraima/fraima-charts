@@ -1,95 +1,46 @@
 apiVersion: v1
 entries:
+  aws-ebs-csi-driver:
+  - apiVersion: v2
+    appVersion: 1.15.0
+    created: "2023-01-17T14:56:55.996673453+03:00"
+    description: A Helm chart for AWS EBS CSI Driver
+    digest: df83f836a585dd36aef1739fbb3873b1fba3bae0918bfe0ea7977c84f3adc021
+    home: https://github.com/kubernetes-sigs/aws-ebs-csi-driver
+    keywords:
+    - aws
+    - ebs
+    - csi
+    kubeVersion: '>=1.17.0-0'
+    maintainers:
+    - name: Kubernetes Authors
+      url: https://github.com/kubernetes-sigs/aws-ebs-csi-driver/
+    name: aws-ebs-csi-driver
+    sources:
+    - https://github.com/kubernetes-sigs/aws-ebs-csi-driver
+    urls:
+    - https://helm.fraima.io/revisions/aws-ebs-csi-driver-2.16.0.tgz
+    version: 2.16.0
   cluster-machine-controller:
   - apiVersion: v2
     appVersion: 0.36.0
-    created: "2023-01-13T19:36:19.27125956+03:00"
+    created: "2023-01-17T14:56:55.999662774+03:00"
     description: A Helm chart for Kubernetes
-    digest: 8034518a10753b8792be4d1baa6c7440e1ca7b76eb9bdd7e0b9b224815999a3e
+    digest: 5c5af45b11c5310b12f3deb60092fc756e00730c8c6f899ee47162132949be97
     name: cluster-machine-controller
     type: application
     urls:
-    - https://helm.fraima.io/cluster-machine-controller-0.0.3.tgz
+    - https://helm.fraima.io/revisions/cluster-machine-controller-0.0.3.tgz
     version: 0.0.3
-  - apiVersion: v2
-    appVersion: 0.36.0
-    created: "2023-01-13T19:36:19.269469132+03:00"
-    description: A Helm chart for Kubernetes
-    digest: 1ccad4a8f757320a6b9e5dc8c86c8ffbc4690d99e9f3184f77906033ec1494fe
-    name: cluster-machine-controller
-    type: application
-    urls:
-    - https://helm.fraima.io/cluster-machine-controller-0.0.2.tgz
-    version: 0.0.2
-  - apiVersion: v2
-    appVersion: 0.36.0
-    created: "2023-01-13T19:36:19.267506335+03:00"
-    description: A Helm chart for Kubernetes
-    digest: 98fa9773c43df94f25300d32c0b4a855df7b0eea19fe5858438f12a8b4db9cf8
-    name: cluster-machine-controller
-    type: application
-    urls:
-    - https://helm.fraima.io/cluster-machine-controller-0.0.1.tgz
-    version: 0.0.1
   machine-group:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-01-13T19:36:19.285284565+03:00"
+    created: "2023-01-17T14:56:56.001820824+03:00"
     description: machine configuration tool for kubernetes
-    digest: 66b05bb0ff481cb9aae98a529ccfdb52d468d861765f0dbb88ef016212483b38
+    digest: e9a1b1467b4ca873f28e5e64986b9e53afd2ae116b1f0e6df669d048781fa446
     name: machine-group
     type: application
     urls:
-    - https://helm.fraima.io/machine-group-0.1.5.tgz
+    - https://helm.fraima.io/revisions/machine-group-0.1.5.tgz
     version: 0.1.5
-  - apiVersion: v2
-    appVersion: 0.0.1
-    created: "2023-01-13T19:36:19.283238373+03:00"
-    description: machine configuration tool for kubernetes
-    digest: ea2b91e558be928ab6bc98da59d5ce6072da5db4f0556e9d10b20c6d7fafb0f1
-    name: machine-group
-    type: application
-    urls:
-    - https://helm.fraima.io/machine-group-0.1.4.tgz
-    version: 0.1.4
-  - apiVersion: v2
-    appVersion: 0.0.1
-    created: "2023-01-13T19:36:19.281163188+03:00"
-    description: machine configuration tool for kubernetes
-    digest: e340edaa2b327add3176a167f787387d887d570a8d493ebe588da321f14c09bb
-    name: machine-group
-    type: application
-    urls:
-    - https://helm.fraima.io/machine-group-0.1.3.tgz
-    version: 0.1.3
-  - apiVersion: v2
-    appVersion: 0.0.1
-    created: "2023-01-13T19:36:19.279121986+03:00"
-    description: machine configuration tool for kubernetes
-    digest: ae2b1e626c14ab30b3593a267ee893abcae2c118fa5c2f32ac20c3ffe34211d6
-    name: machine-group
-    type: application
-    urls:
-    - https://helm.fraima.io/machine-group-0.1.2.tgz
-    version: 0.1.2
-  - apiVersion: v2
-    appVersion: 0.0.1
-    created: "2023-01-13T19:36:19.276980208+03:00"
-    description: machine configuration tool for kubernetes
-    digest: a45cdead46aa8c9c80843d26be54f149a2e200c43d59aa9a02103d3e9cb08a38
-    name: machine-group
-    type: application
-    urls:
-    - https://helm.fraima.io/machine-group-0.1.1.tgz
-    version: 0.1.1
-  - apiVersion: v2
-    appVersion: 0.0.1
-    created: "2023-01-13T19:36:19.273376282+03:00"
-    description: machine configuration tool for kubernetes
-    digest: be75d50cde945018bfb1318734f9f78ea6b5b2e9cafee2c1e8060e696dbc2b6f
-    name: machine-group
-    type: application
-    urls:
-    - https://helm.fraima.io/machine-group-0.1.0.tgz
-    version: 0.1.0
-generated: "2023-01-13T19:36:19.256405048+03:00"
+generated: "2023-01-17T14:56:55.980356076+03:00"
