@@ -1,46 +1,36 @@
 apiVersion: v1
 entries:
-  aws-ebs-csi-driver:
-  - apiVersion: v2
-    appVersion: 1.15.0
-    created: "2023-01-17T14:56:55.996673453+03:00"
-    description: A Helm chart for AWS EBS CSI Driver
-    digest: df83f836a585dd36aef1739fbb3873b1fba3bae0918bfe0ea7977c84f3adc021
-    home: https://github.com/kubernetes-sigs/aws-ebs-csi-driver
-    keywords:
-    - aws
-    - ebs
-    - csi
-    kubeVersion: '>=1.17.0-0'
-    maintainers:
-    - name: Kubernetes Authors
-      url: https://github.com/kubernetes-sigs/aws-ebs-csi-driver/
-    name: aws-ebs-csi-driver
-    sources:
-    - https://github.com/kubernetes-sigs/aws-ebs-csi-driver
-    urls:
-    - https://helm.fraima.io/revisions/aws-ebs-csi-driver-2.16.0.tgz
-    version: 2.16.0
   cluster-machine-controller:
   - apiVersion: v2
     appVersion: 0.36.0
-    created: "2023-01-17T14:56:55.999662774+03:00"
+    created: "2023-01-18T04:59:53.690909502+03:00"
     description: A Helm chart for Kubernetes
-    digest: 5c5af45b11c5310b12f3deb60092fc756e00730c8c6f899ee47162132949be97
+    digest: 608da1acca0670ba56afc0954e85d35cbca446b29f3fbdd3ae5753d189adf0a7
     name: cluster-machine-controller
     type: application
     urls:
-    - https://helm.fraima.io/revisions/cluster-machine-controller-0.0.3.tgz
+    - https://helm.fraima.io/helm-chart-revisions/cluster-machine-controller-0.0.3.tgz
     version: 0.0.3
   machine-group:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-01-17T14:56:56.001820824+03:00"
+    created: "2023-01-18T04:59:53.693326848+03:00"
     description: machine configuration tool for kubernetes
-    digest: e9a1b1467b4ca873f28e5e64986b9e53afd2ae116b1f0e6df669d048781fa446
+    digest: 7466e07614bea90b1dac623693450140f50bac2d60b871b26da08099a4e0ea47
     name: machine-group
     type: application
     urls:
-    - https://helm.fraima.io/revisions/machine-group-0.1.5.tgz
+    - https://helm.fraima.io/helm-chart-revisions/machine-group-0.1.5.tgz
     version: 0.1.5
-generated: "2023-01-17T14:56:55.980356076+03:00"
+  yandex-csi-controller:
+  - apiVersion: v2
+    appVersion: 0.9.12
+    created: "2023-01-18T04:59:53.697703351+03:00"
+    description: A Helm chart for management yandex storages
+    digest: aba2045922835a652402aecebc418717b95e33a0ae029cbd7fbd2bc3d014e349
+    name: yandex-csi-controller
+    type: application
+    urls:
+    - https://helm.fraima.io/helm-chart-revisions/yandex-csi-controller-0.0.1.tgz
+    version: 0.0.1
+generated: "2023-01-18T04:59:53.679868101+03:00"
