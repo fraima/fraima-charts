@@ -1,0 +1,56 @@
+# Default values for cluster-machine-approver.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+namespace: kube-fraima-ccm
+
+serviceAccount:
+  # The name of the sa, if not set, a name is generated using the chart name
+  name: ""
+
+clusterRole:
+  # The name of the cr, if not set, a name is generated using the chart name
+  name: ""
+
+clusterRoleBinding:
+  # The name of the crb, if not set, a name is generated using the chart name
+  name: ""
+
+deployment:
+  # The name of the deployment, if not set, a name is generated using the chart name
+  name: ""
+
+  replicaCount: 1
+
+  nodeSelector:
+    node-role.kubernetes.io/control-plane: ""
+
+  tolerations:
+    # this taint is set on all nodes when an external CCM is used
+    # so we should tolerate it to schedule our CCM
+    - key: "node.cloudprovider.kubernetes.io/uninitialized"
+      value: "true"
+      effect: "NoSchedule"
+    # CCM should be able to run on masters
+    - key: "node-role.kubernetes.io/control-plane"
+      effect: "NoSchedule"
+    - key: "node-role.kubernetes.io/master"
+      effect: "NoSchedule"
+    - key: "CriticalAddonsOnly"
+      operator: "Exists"
+
+  containers:
+    name: ""
+
+    image:
+      repository: dobrykot/cluster-machine-approver
+      # Overrides the image tag whose default is the chart appVersion.
+      tag: ""
+
+    resources:
+      limits:
+        cpu: 200m
+        memory: 200Mi
+      requests:
+        cpu: 100m
+        memory: 100Mi

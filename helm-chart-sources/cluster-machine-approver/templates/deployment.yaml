@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ default .Chart.Name .Values.deployment.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    {{- include "cluster-machine-approver.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.deployment.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "cluster-machine-approver.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "cluster-machine-approver.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.deployment.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ default .Chart.Name .Values.serviceAccount.name }}
+      containers:
+        - name: {{ default .Chart.Name .Values.deployment.containers.name }}
+          image: "{{ .Values.deployment.containers.image.repository }}:{{ .Values.deployment.containers.image.tag | default .Chart.AppVersion }}"
+          resources:
+            {{- toYaml .Values.deployment.containers.resources | nindent 12 }}
+          env:
+            - name: YANDEX_AIM_JSON
+              valueFrom:
+                secretKeyRef:
+                  name: yandex-cloud
+                  key: serviceAccountJSON
+            - name: YANDEX_FOLDER_ID
+              valueFrom:
+                secretKeyRef:
+                  name: yandex-cloud
+                  key: folderID
+            - name: INSTANCE_NAME_LAYOUT
+              value: '^\w*:\w*:(.*)'
+            - name: KubeHost
+              value: "kubernetes.default"
+      {{- with .Values.deployment.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
