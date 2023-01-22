@@ -3,7 +3,7 @@ kind: ClusterRole
 metadata:
   annotations:
     rbac.authorization.kubernetes.io/autoupdate: "true"
-  name: system:{{ default .Chart.Name .Values.clusterRole.name }}
+  name: {{ .Release.Name }}-cluster-machine-approver
   labels:
     {{- include "cluster-machine-approver.labels" . | nindent 4 }}
 rules:

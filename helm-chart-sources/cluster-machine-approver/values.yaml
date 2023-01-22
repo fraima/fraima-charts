@@ -2,55 +2,60 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-namespace: kube-fraima-ccm
+provider:
+  type: YandexCloud
+  name: yandex
 
-serviceAccount:
-  # The name of the sa, if not set, a name is generated using the chart name
-  name: ""
+replicaCount: 1
 
-clusterRole:
-  # The name of the cr, if not set, a name is generated using the chart name
-  name: ""
+nodeSelector:
+  node-role.kubernetes.io/control-plane: ""
 
-clusterRoleBinding:
-  # The name of the crb, if not set, a name is generated using the chart name
-  name: ""
+image:
+  repository: dobrykot/cluster-machine-approver
+  tag: ""
+  pullPolicy: IfNotPresent
 
-deployment:
-  # The name of the deployment, if not set, a name is generated using the chart name
-  name: ""
+terminationMessagePath:
+terminationMessagePolicy:
+resources:  {}
+securityContext: {}
+env: []
+tolerations: []
 
-  replicaCount: 1
-
-  nodeSelector:
-    node-role.kubernetes.io/control-plane: ""
-
+defaults:
+  resources:
+    limits:
+      cpu: 200m
+      memory: 200Mi
+    requests:
+      cpu: 100m
+      memory: 100Mi
+  env:
+    - name: YANDEX_AIM_JSON
+      valueFrom:
+        secretKeyRef:
+          name: yandex-cloud
+          key: serviceAccountJSON
+    - name: YANDEX_FOLDER_ID
+      valueFrom:
+        secretKeyRef:
+          name: yandex-cloud
+          key: folderID
+    - name: INSTANCE_NAME_LAYOUT
+      value: '^\w*:\w*:(.*)'
+    - name: KubeHost
+      value: "kubernetes.default"
+  securityContext: {}
   tolerations:
-    # this taint is set on all nodes when an external CCM is used
-    # so we should tolerate it to schedule our CCM
-    - key: "node.cloudprovider.kubernetes.io/uninitialized"
-      value: "true"
-      effect: "NoSchedule"
-    # CCM should be able to run on masters
-    - key: "node-role.kubernetes.io/control-plane"
-      effect: "NoSchedule"
-    - key: "node-role.kubernetes.io/master"
-      effect: "NoSchedule"
-    - key: "CriticalAddonsOnly"
-      operator: "Exists"
-
-  containers:
-    name: ""
-
-    image:
-      repository: dobrykot/cluster-machine-approver
-      # Overrides the image tag whose default is the chart appVersion.
-      tag: ""
-
-    resources:
-      limits:
-        cpu: 200m
-        memory: 200Mi
-      requests:
-        cpu: 100m
-        memory: 100Mi
+  - key: "node.cloudprovider.kubernetes.io/uninitialized"
+    value: "true"
+    effect: "NoSchedule"
+  - key: "node-role.kubernetes.io/control-plane"
+    effect: "NoSchedule"
+  - key: "node-role.kubernetes.io/master"
+    effect: "NoSchedule"
+  - key: "CriticalAddonsOnly"
+    operator: "Exists"
+  terminationMessagePath: /dev/termination-log
+  terminationMessagePolicy: File

@@ -1,14 +1,14 @@
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: system:{{ default .Chart.Name .Values.clusterRoleBinding.name }}
+  name: {{ .Release.Name }}-cluster-machine-approver
   labels:
     {{- include "cluster-machine-approver.labels" . | nindent 4 }}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: system:{{ default .Chart.Name .Values.clusterRole.name }}
+  name: {{ .Release.Name }}-cluster-machine-approver
 subjects:
   - kind: ServiceAccount
-    name: {{ default .Chart.Name .Values.serviceAccount.name }}
-    namespace: {{ .Values.namespace }}
+    name: {{ include "cluster-machine-approver.name" . }}
+    namespace: {{ .Release.Namespace }}
