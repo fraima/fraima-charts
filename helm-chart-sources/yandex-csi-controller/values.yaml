@@ -1,15 +1,11 @@
+serviceAccountJSON: ""
+folderID: ""
 
-ycsi:
-  cloud_secret:
-    id: ""
-    service_account_id: ""
-    created_at: ""
-    key_algorithm: ""
-    public_key: |-
-      ""
-    private_key: |-
-      ""
-  folder_id: ""
+# defaultStorageclass: 
+# "yc-network-hdd"
+# "yc-network-ssd"
+# "yc-network-ssd-nonreplicated" 
+defaultStorageclass: "yc-network-hdd"
 
 sidecars:
   nodeDriverRegistrar:
@@ -115,7 +111,7 @@ sidecars:
 
 image: 
   pullPolicy: IfNotPresent
-  repository: dobrykot/cluster-csi-controller
+  repository: registry.deckhouse.io/yandex-csi-driver/yandex-csi-driver
   # Overrides the image tag whose default is v{{ .Chart.AppVersion }}
   tag: ""
 
@@ -162,8 +158,3 @@ node:
   securityContext:
     privileged: true
     readOnlyRootFilesystem: true
-
-provider:
-  type: YandexCloud
-  name: yandex
-

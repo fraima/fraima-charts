@@ -2,6 +2,12 @@ apiVersion: v2
 name: yandex-csi-controller
 description: A Helm chart for management yandex storages
 
+maintainers:
+  - name: Dobry-kot
+    url: https://github.com/fraima
+sources:
+  - https://github.com/fraima/helm-charts/tree/main/helm-chart-sources/yandex-csi-controller
+
 # A chart can be either an 'application' or a 'library' chart.
 #
 # Application charts are a collection of templates that can be packaged into versioned archives
@@ -22,3 +28,4 @@ version: 0.0.1
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
 appVersion: "0.9.12"
+

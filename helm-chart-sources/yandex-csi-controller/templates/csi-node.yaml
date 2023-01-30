@@ -19,9 +19,6 @@ spec:
       tolerations:
         - operator: Exists
 
-      nodeSelector:
-        provider: yandex
-
       containers:
         {{- with .Values.sidecars.nodeDriverRegistrar }}
         - name: csi-node-driver-registrar
