@@ -3,9 +3,9 @@ entries:
   cluster-machine-controller:
   - apiVersion: v2
     appVersion: 0.36.0
-    created: "2023-01-18T05:02:30.915494512+03:00"
+    created: "2023-01-31T00:55:34.937611908+03:00"
     description: A Helm chart for Kubernetes
-    digest: f98b0c348f69c402fd62e119eb74f57798d14bf18c9f4853f270980c989ee0b2
+    digest: 1133a9dccd4acf9329b61615c12b790f9121cb84829921b7ccbecc8f15f6e606
     name: cluster-machine-controller
     type: application
     urls:
@@ -14,9 +14,9 @@ entries:
   machine-group:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-01-18T05:02:30.917871181+03:00"
+    created: "2023-01-31T00:55:34.941431639+03:00"
     description: machine configuration tool for kubernetes
-    digest: 01c09e27815e9217705dbe44c71074b5670a97c7cb17852aa9e58f4bf9ade0f4
+    digest: 2ec8f63a6dea3076853ea2136d683447526192573a725600076c6df935a2eaf3
     name: machine-group
     type: application
     urls:
@@ -25,7 +25,22 @@ entries:
   yandex-csi-controller:
   - apiVersion: v2
     appVersion: 0.9.12
-    created: "2023-01-18T05:02:30.922207278+03:00"
+    created: "2023-01-31T00:55:34.954594954+03:00"
+    description: A Helm chart for management yandex storages
+    digest: 2f241b1376b3fc65bf6e7cdc2edd74b912214b743fbe5da1c4fea2c503a86474
+    maintainers:
+    - name: Dobry-kot
+      url: https://github.com/fraima
+    name: yandex-csi-controller
+    sources:
+    - https://github.com/fraima/helm-charts/tree/main/helm-chart-sources/yandex-csi-controller
+    type: application
+    urls:
+    - https://helm.fraima.io/helm-chart-revisions/yandex-csi-controller-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: 0.9.12
+    created: "2023-01-31T00:55:34.94852658+03:00"
     description: A Helm chart for management yandex storages
     digest: c447ad4d63ce9b7d6991c6bba5015bc1ff298acb425740c76f5cf6bcbb0e5f65
     name: yandex-csi-controller
@@ -33,4 +48,4 @@ entries:
     urls:
     - https://helm.fraima.io/helm-chart-revisions/yandex-csi-controller-0.0.1.tgz
     version: 0.0.1
-generated: "2023-01-18T05:02:30.904550675+03:00"
+generated: "2023-01-31T00:55:34.923005492+03:00"
