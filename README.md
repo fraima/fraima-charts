@@ -6,7 +6,7 @@ helm lint helm-chart-sources/*
 
 ### Create the Helm chart package
 ```bash
-helm package helm-chart-sources/*
+helm package helm-chart-sources/* --destination helm-chart-revisions
 ```
 
 ### Create the Helm chart repository index
