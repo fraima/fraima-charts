@@ -1,12 +1,10 @@
 
 serviceAccountJSON: ""
-
 folderID: ""
 vpcID: ""
 routeTableID: ""
 
 clusterName: ""
-
 podCIDR: ""
 
 k8sApiServer: ""
@@ -18,8 +16,8 @@ controller:
   
   image:
     pullPolicy: IfNotPresent
-    repository: registry.deckhouse.io/deckhouse/ce
-    tag: bfbae39acd8fbe3ecb8b287214357906dd2815a805f5b56d548c48c9-1663920311654
+    repository: registry.deckhouse.io/yandex-cloud-controller-manager/yandex-cloud-controller-manager
+    tag: ""
 
   extraArgs:
     leader-elect: true
@@ -28,7 +26,7 @@ controller:
     v: 2
 
   ports:
-    addressPort: 64231
+    addressPort: 11258
     addressPortAlias: https
 
 defaults:
