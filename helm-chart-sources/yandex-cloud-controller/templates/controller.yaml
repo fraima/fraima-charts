@@ -92,7 +92,7 @@ spec:
                 name: {{ include "yandex-cloud-controller.name" $ }}
                 key: routeTableID
 
-        image: {{ .image.repository }}:{{ .image.tag }}
+        image: {{ $.Values.controller.image.repository }}:{{ $.Values.controller.image.tag | default (printf "v%s" $.Chart.AppVersion) }}
         imagePullPolicy: {{ .image.pullPolicy }}
 
         {{- with .resources | default $.Values.defaults.resources }}
@@ -144,9 +144,9 @@ spec:
       schedulerName: {{ .Values.controller.schedulerName          | default "default-scheduler" }}
 
       securityContext:
-        runAsGroup: {{ .Values.controller.securityContext.runAsGroup      | default 1000 | quote }}
-        runAsNonRoot: {{ .Values.controller.securityContext.runAsNonRoot  | default true | quote }}
-        runAsUser: {{ .Values.controller.securityContext.runAsUser        | default 1000 | quote }}
+        runAsGroup: 1000
+        runAsNonRoot: true
+        runAsUser: 1000
 
       serviceAccount: {{ include "yandex-cloud-controller.name" . }}
       serviceAccountName: {{ include "yandex-cloud-controller.name" . }}

@@ -76,8 +76,8 @@ spec:
           {{- toYaml . | nindent 10 }}
         {{- end }}
 
-        terminationMessagePath: {{ .terminationMessagePath | default $.Values.defaults.terminationMessagePath }}
-        terminationMessagePolicy: {{ .terminationMessagePolicy | default $.Values.defaults.terminationMessagePolicy }}
+        terminationMessagePath: {{ .terminationMessagePath      | default $.Values.defaults.terminationMessagePath }}
+        terminationMessagePolicy: {{ .terminationMessagePolicy  | default $.Values.defaults.terminationMessagePolicy }}
 
         volumeMounts:
           - name: socket-dir
@@ -119,8 +119,8 @@ spec:
           {{- toYaml . | nindent 10 }}
         {{- end }}
 
-        terminationMessagePath: {{ .terminationMessagePath | default $.Values.defaults.terminationMessagePath }}
-        terminationMessagePolicy: {{ .terminationMessagePolicy | default $.Values.defaults.terminationMessagePolicy }}
+        terminationMessagePath: {{ .terminationMessagePath      | default $.Values.defaults.terminationMessagePath }}
+        terminationMessagePolicy: {{ .terminationMessagePolicy  | default $.Values.defaults.terminationMessagePolicy }}
 
         volumeMounts:
           - name: socket-dir
@@ -163,8 +163,8 @@ spec:
           {{- toYaml . | nindent 10 }}
         {{- end }}
 
-        terminationMessagePath: {{ .terminationMessagePath | default $.Values.defaults.terminationMessagePath }}
-        terminationMessagePolicy: {{ .terminationMessagePolicy | default $.Values.defaults.terminationMessagePolicy }}
+        terminationMessagePath: {{ .terminationMessagePath      | default $.Values.defaults.terminationMessagePath }}
+        terminationMessagePolicy: {{ .terminationMessagePolicy  | default $.Values.defaults.terminationMessagePolicy }}
 
         volumeMounts:
           - name: socket-dir
@@ -207,8 +207,8 @@ spec:
           {{- toYaml . | nindent 10 }}
         {{- end }}
 
-        terminationMessagePath: {{ .terminationMessagePath | default $.Values.defaults.terminationMessagePath }}
-        terminationMessagePolicy: {{ .terminationMessagePolicy | default $.Values.defaults.terminationMessagePolicy }}
+        terminationMessagePath: {{ .terminationMessagePath      | default $.Values.defaults.terminationMessagePath }}
+        terminationMessagePolicy: {{ .terminationMessagePolicy  | default $.Values.defaults.terminationMessagePolicy }}
 
         volumeMounts:
           - name: socket-dir
@@ -264,8 +264,8 @@ spec:
           {{- toYaml . | nindent 10 }}
         {{- end }}
 
-        terminationMessagePath: {{ .terminationMessagePath | default $.Values.defaults.terminationMessagePath }}
-        terminationMessagePolicy: {{ .terminationMessagePolicy | default $.Values.defaults.terminationMessagePolicy }}
+        terminationMessagePath: {{ .terminationMessagePath      | default $.Values.defaults.terminationMessagePath }}
+        terminationMessagePolicy: {{ .terminationMessagePolicy  | default $.Values.defaults.terminationMessagePolicy }}
 
         volumeMounts:
           - name: socket-dir
@@ -328,19 +328,19 @@ spec:
           {{- toYaml . | nindent 10 }}
         {{- end }}
 
-        terminationMessagePath: {{ .terminationMessagePath | default $.Values.defaults.terminationMessagePath }}
-        terminationMessagePolicy: {{ .terminationMessagePolicy | default $.Values.defaults.terminationMessagePolicy }}
+        terminationMessagePath: {{ .terminationMessagePath      | default $.Values.defaults.terminationMessagePath }}
+        terminationMessagePolicy: {{ .terminationMessagePolicy  | default $.Values.defaults.terminationMessagePolicy }}
 
         volumeMounts:
           - mountPath: {{ $.Values.defaults.csiPath }}
             name: socket-dir
       {{- end }}
 
-      dnsPolicy: Default
-      hostNetwork: true
-      priorityClassName: system-cluster-critical
-      restartPolicy: Always
-      schedulerName: default-scheduler
+      dnsPolicy: {{ .Values.controller.dnsPolicy                  | default "Default" }}
+      hostNetwork: {{ .Values.controller.hostNetwork              | default false }}
+      priorityClassName: {{ .Values.controller.priorityClassName  | default "system-cluster-critical" }}
+      restartPolicy: {{ .Values.controller.restartPolicy          | default "Always" }}
+      schedulerName: {{ .Values.controller.schedulerName          | default "default-scheduler" }}
 
       securityContext:
         runAsGroup: 65534
