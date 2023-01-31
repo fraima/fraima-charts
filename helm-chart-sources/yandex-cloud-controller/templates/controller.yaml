@@ -144,9 +144,9 @@ spec:
       schedulerName: {{ .Values.controller.schedulerName          | default "default-scheduler" }}
 
       securityContext:
-        runAsGroup: {{ .Values.controller.securityContext.runAsGroup      | default 1000 }}
-        runAsNonRoot: {{ .Values.controller.securityContext.runAsNonRoot  | default true }}
-        runAsUser: {{ .Values.controller.securityContext.runAsUser        | default 1000 }}
+        runAsGroup: {{ .Values.controller.securityContext.runAsGroup      | default 1000 | quote }}
+        runAsNonRoot: {{ .Values.controller.securityContext.runAsNonRoot  | default true | quote }}
+        runAsUser: {{ .Values.controller.securityContext.runAsUser        | default 1000 | quote }}
 
       serviceAccount: {{ include "yandex-cloud-controller.name" . }}
       serviceAccountName: {{ include "yandex-cloud-controller.name" . }}
