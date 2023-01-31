@@ -3,9 +3,9 @@ entries:
   cluster-machine-controller:
   - apiVersion: v2
     appVersion: 0.36.0
-    created: "2023-02-01T01:05:10.459471934+03:00"
+    created: "2023-02-01T01:12:47.156860324+03:00"
     description: A Helm chart for Kubernetes
-    digest: e154e868b124db7e388c3216df19795b46828c7b3a44dfb1c686203164a77452
+    digest: 4febac424b907809f9ba8a929fc828ee251ab4223f3ddd8ac26946697a524ecb
     name: cluster-machine-controller
     type: application
     urls:
@@ -14,9 +14,9 @@ entries:
   machine-group:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-02-01T01:05:10.461842746+03:00"
+    created: "2023-02-01T01:12:47.160725803+03:00"
     description: machine configuration tool for kubernetes
-    digest: ccb93c318689cbd2b320e13f88d2483458b4e66db0dc558e41f82f47abef5f35
+    digest: ec8d3a7bb6c95552728fcfecd12568b3cd87b5a0be8927b5c35a2a8fabde701c
     name: machine-group
     type: application
     urls:
@@ -25,7 +25,7 @@ entries:
   yandex-cloud-controller:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-02-01T01:05:10.467825553+03:00"
+    created: "2023-02-01T01:12:47.169555064+03:00"
     description: A Helm chart for Kubernetes
     digest: 92d41ff815ebbe495672e3ebf94957f7213005c161175182a7b350a0f3217542
     name: yandex-cloud-controller
@@ -35,7 +35,17 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: 0.20.0
-    created: "2023-02-01T01:05:10.464374201+03:00"
+    created: "2023-02-01T01:12:47.16655263+03:00"
+    description: A Helm chart for Kubernetes
+    digest: b165762d61320a3d4b4598d0c10975a1d9c13bee030784743647c0133e39a1ba
+    name: yandex-cloud-controller
+    type: application
+    urls:
+    - https://helm.fraima.io/helm-chart-revisions/yandex-cloud-controller-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: 0.20.0
+    created: "2023-02-01T01:12:47.163515871+03:00"
     description: A Helm chart for Kubernetes
     digest: bb7ddd2b6029ad8855748eb5e75065a6ba1ad88982ef583284b5bb5d28293a9f
     name: yandex-cloud-controller
@@ -46,9 +56,9 @@ entries:
   yandex-csi-controller:
   - apiVersion: v2
     appVersion: 0.9.12
-    created: "2023-02-01T01:05:10.48713548+03:00"
+    created: "2023-02-01T01:12:47.182575283+03:00"
     description: A Helm chart for management yandex storages
-    digest: 1174eb2662af48e01545bf602d8ca5a9d8e3081ce14f4eb3d0b88845f5478337
+    digest: c136abbc4d956ceec476d5acd5a625673d5c1a5939aafdd580d5f43b3f69e519
     maintainers:
     - name: Dobry-kot
       url: https://github.com/fraima
@@ -61,7 +71,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 0.9.12
-    created: "2023-02-01T01:05:10.481331068+03:00"
+    created: "2023-02-01T01:12:47.17890577+03:00"
     description: A Helm chart for management yandex storages
     digest: 2f241b1376b3fc65bf6e7cdc2edd74b912214b743fbe5da1c4fea2c503a86474
     maintainers:
@@ -76,7 +86,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 0.9.12
-    created: "2023-02-01T01:05:10.474945145+03:00"
+    created: "2023-02-01T01:12:47.174967406+03:00"
     description: A Helm chart for management yandex storages
     digest: c447ad4d63ce9b7d6991c6bba5015bc1ff298acb425740c76f5cf6bcbb0e5f65
     name: yandex-csi-controller
@@ -84,4 +94,4 @@ entries:
     urls:
     - https://helm.fraima.io/helm-chart-revisions/yandex-csi-controller-0.0.1.tgz
     version: 0.0.1
-generated: "2023-02-01T01:05:10.448504476+03:00"
+generated: "2023-02-01T01:12:47.146149904+03:00"
