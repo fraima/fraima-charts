@@ -37,9 +37,9 @@ spec:
       containers:
       - name: {{ include "yandex-cloud-controller.name" $ }}
         args:
-          - --cluster-cidr={{ $.Values.podCidr }}
+          - --cluster-cidr={{ $.Values.podCIDR }}
           - --cloud-provider=yandex
-          - --cluster-name={{ $.Values.cluster_name }}
+          - --cluster-name={{ $.Values.clusterName }}
           - --bind-address=$(BIND_IP)
           - --secure-port={{ .ports.addressPort }}
           {{- with .extraArgs }}
