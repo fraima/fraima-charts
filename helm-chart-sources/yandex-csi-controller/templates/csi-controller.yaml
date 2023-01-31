@@ -278,6 +278,11 @@ spec:
           - --address=$(POD_IP):{{ .ports.addressPort }}
           - --endpoint=unix://$(ADDRESS)
           - --folder-id=$(YANDEX_FOLDER_ID)
+          {{- with .extraArgs }}
+            {{- range $k, $v := . }}
+          - --{{- $k }}={{ $v -}}
+            {{end}}
+          {{- end }}
         env:
           - name: ADDRESS
             value: "{{ $.Values.defaults.csiPath }}/{{ $.Values.defaults.csiSockName }}"
