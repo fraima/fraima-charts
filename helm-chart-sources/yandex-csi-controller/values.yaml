@@ -125,6 +125,14 @@ defaults:
       cpu: 100m
       memory: 128Mi
 
+  volumeMounts:
+    - mountPath: /csi/
+      name: socket-dir
+
+  volumes:
+    - name: socket-dir
+      emptyDir: {}
+
 
   securityContext:
     allowPrivilegeEscalation: false

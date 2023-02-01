@@ -79,9 +79,11 @@ spec:
         terminationMessagePath: {{ .terminationMessagePath      | default $.Values.defaults.terminationMessagePath }}
         terminationMessagePolicy: {{ .terminationMessagePolicy  | default $.Values.defaults.terminationMessagePolicy }}
 
+        {{- with $.Values.defaults.volumeMounts}}
         volumeMounts:
-          - name: socket-dir
-            mountPath: {{ $.Values.defaults.csiPath }}
+          {{- toYaml . | nindent 8 }}
+        {{- end }}
+
       {{- end }}
 
       {{- with .Values.sidecars.attacher }}
@@ -122,9 +124,10 @@ spec:
         terminationMessagePath: {{ .terminationMessagePath      | default $.Values.defaults.terminationMessagePath }}
         terminationMessagePolicy: {{ .terminationMessagePolicy  | default $.Values.defaults.terminationMessagePolicy }}
 
+        {{- with $.Values.defaults.volumeMounts}}
         volumeMounts:
-          - name: socket-dir
-            mountPath: {{ $.Values.defaults.csiPath }}
+          {{- toYaml . | nindent 8 }}
+        {{- end }}
 
       {{- end }}
 
@@ -166,10 +169,12 @@ spec:
         terminationMessagePath: {{ .terminationMessagePath      | default $.Values.defaults.terminationMessagePath }}
         terminationMessagePolicy: {{ .terminationMessagePolicy  | default $.Values.defaults.terminationMessagePolicy }}
 
+        {{- with $.Values.defaults.volumeMounts}}
         volumeMounts:
-          - name: socket-dir
-            mountPath: {{ $.Values.defaults.csiPath }}
+          {{- toYaml . | nindent 8 }}
+        {{- end }}
 
+        
       {{- end }}
 
       {{- with .Values.sidecars.snapshotter }}
@@ -210,9 +215,12 @@ spec:
         terminationMessagePath: {{ .terminationMessagePath      | default $.Values.defaults.terminationMessagePath }}
         terminationMessagePolicy: {{ .terminationMessagePolicy  | default $.Values.defaults.terminationMessagePolicy }}
 
+        {{- with $.Values.defaults.volumeMounts}}
         volumeMounts:
-          - name: socket-dir
-            mountPath: {{ $.Values.defaults.csiPath }}
+          {{- toYaml . | nindent 8 }}
+        {{- end }}
+
+
 
       {{- end }}
 
@@ -267,9 +275,13 @@ spec:
         terminationMessagePath: {{ .terminationMessagePath      | default $.Values.defaults.terminationMessagePath }}
         terminationMessagePolicy: {{ .terminationMessagePolicy  | default $.Values.defaults.terminationMessagePolicy }}
 
+        {{- with $.Values.defaults.volumeMounts}}
         volumeMounts:
-          - name: socket-dir
-            mountPath: {{ $.Values.defaults.csiPath }}
+          {{- toYaml . | nindent 8 }}
+        {{- end }}
+
+
+
       {{- end }}
 
       {{- with .Values.controller }}
@@ -331,9 +343,12 @@ spec:
         terminationMessagePath: {{ .terminationMessagePath      | default $.Values.defaults.terminationMessagePath }}
         terminationMessagePolicy: {{ .terminationMessagePolicy  | default $.Values.defaults.terminationMessagePolicy }}
 
+        {{- with $.Values.defaults.volumeMounts}}
         volumeMounts:
-          - mountPath: {{ $.Values.defaults.csiPath }}
-            name: socket-dir
+          {{- toYaml . | nindent 8 }}
+        {{- end }}
+
+
       {{- end }}
 
       dnsPolicy: {{ .Values.controller.dnsPolicy                  | default "Default" }}
@@ -354,6 +369,7 @@ spec:
       tolerations:
         - operator: Exists
 
+      {{- with .Values.defaults.volumes}}
       volumes:
-        - emptyDir: {}
-          name: socket-dir
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
