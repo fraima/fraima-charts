@@ -51,3 +51,7 @@ defaults:
 
   nodeSelector:
     node-role.kubernetes.io/control-plane: ""
+
+provider:
+  secret:
+    enabled: true

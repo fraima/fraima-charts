@@ -2,6 +2,8 @@
 {{- $currentNamespace             := .Release.Namespace -}}
 {{- $cloudAuthSecret              := (lookup "v1" "Secret" $currentNamespace .Values.template.spec.provider.name) }}
 {{- $caPublic                     := (lookup "v1" "ConfigMap" $currentNamespace "kube-root-ca.crt") }}
+{{- $users                        := (lookup "configuration.fraima.io/v1alpha1" "User" "default" "") }}
+{{- $clusterInfo                  := (lookup "configuration.fraima.io/v1alpha1" "Fraima" "default" "") }}
 {{- $cloudAuthSecretData          := (get $cloudAuthSecret "data") | default dict }}
 {{- $caPublicData                 := (get $caPublic        "data") | default dict }}
 {{- $serviceAccountJSON           := printf "%s" $cloudAuthSecretData.serviceAccountJSON | b64dec }}
@@ -16,14 +18,19 @@ stringData:
     #cloud-config
     version: v1
     users:
-      - name: dkot
-        sudo: ALL=(ALL) NOPASSWD:ALL
-        groups: users, admin
-        shell: /bin/bash
-        lock_passwd: true
+
+      {{ range $index, $user := $cloudAuthSecret }}
+      - name: {{ $user.spec.name }}
+        sudo: {{ $user.spec.sudo }}
+        groups: {{ $user.spec.groups }}
+        shell: {{ $user.spec.shell }}
+        lock_passwd: {{ $user.spec.lock_passwd }}
         ssh_authorized_keys:
-          - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDBKp0G8Vlyi9XgxoL9xA20sY+Vc4szJ5PnP3BpAyaThtEIPtz/6w8DYy1qMGR5lq2MtjHKo0ghApCEM78rZf8PMR/EFW5hOeZzgiHZZVOUIThDwNAk9XQHKG+6OOS5+gpv+VLB3DTXxlPJsGdiI3/SBTmMfUCDZVR6LA94Uh5tgNypPqRRIv65tW0KbGjsYnMQxKFvO9lMHeFtJm1bAsb/+dbm1MafWYXg3yEGr6pyiHgaiwYgx2sKtIVqkg8IYNxLXzjIyS4kwB/WCkv3CEEIDL8KIi+HGnfv2tFzvtjwLgz2rtG73tVLzvjuplwG24Fx5vgCcTnWfFvAWiG5r8+IaHZ9ZvO9TOeAlOAWjB3ieHjA5ZS3R9J3WOAlfAQCA5jz6i2tFxAtIPBdWL0ZzYKUVLR561qd1AY5v9akqhquVIZqsJMzaLdCg0eoLNNdKgdQLXJohMPlqR96lR+mbym7UI/Fn7FvURibRgb781Z86ALfeYVHLYidVkrmhuuHzuU= dk@dobry-kot-system
-    
+          {{ range $key := $user.spec.ssh_authorized_keys }}
+          - {{ $key }}
+          {{ end }}
+      {{ end }}
+  
     packages:
       - wget
       - jq
@@ -68,7 +75,7 @@ stringData:
           clusters:
           - cluster:
               insecure-skip-tls-verify: true
-              server: https://{{ .Values.clusterUrl }}:{{ .Values.clusterPort }}
+              server: https://{{ $clusterInfo.spec.clusterApi }}:{{ $clusterInfo.spec.clusterApiPort }}
             name: bootstrap
           contexts:
           - context:
