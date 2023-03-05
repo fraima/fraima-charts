@@ -166,3 +166,8 @@ node:
   securityContext:
     privileged: true
     readOnlyRootFilesystem: true
+
+provider:
+  secret:
+    enabled: true
+    name: yandex-k8s-controller

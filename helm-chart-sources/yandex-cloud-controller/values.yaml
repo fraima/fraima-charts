@@ -55,3 +55,4 @@ defaults:
 provider:
   secret:
     enabled: true
+    name: yandex-k8s-controller
