@@ -3,9 +3,9 @@ entries:
   cluster-machine-controller:
   - apiVersion: v2
     appVersion: 0.36.0
-    created: "2023-03-05T23:26:06.248268307+03:00"
+    created: "2023-03-05T23:27:05.125279683+03:00"
     description: A Helm chart for Kubernetes
-    digest: f3d554da46b69c37e0fbed0f27318fc0625dc372b1ff4fb447ef9d9e205f3485
+    digest: 046b6ee70e01d70b3dbe7904ab7b815957374fc41af2d8540cc803120d2a9f8b
     name: cluster-machine-controller
     type: application
     urls:
@@ -14,9 +14,9 @@ entries:
   machine-group:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-03-05T23:26:06.250635834+03:00"
+    created: "2023-03-05T23:27:05.127624246+03:00"
     description: machine configuration tool for kubernetes
-    digest: 2984387631cc8e832ae83fea0fa707bd9a61451c255208eeb6c34e715d174ec8
+    digest: 3fca4d67d0d4850406f918c773590c6d5c0abd068ecabf057c40639241bd219d
     name: machine-group
     type: application
     urls:
@@ -25,7 +25,22 @@ entries:
   yandex-cloud-controller:
   - apiVersion: v2
     appVersion: 0.25.2
-    created: "2023-03-05T23:26:06.255333336+03:00"
+    created: "2023-03-05T23:27:05.134612259+03:00"
+    description: A Helm chart for management yandex cloud resources
+    digest: 1abd6050ed279fac05ee88e0e0824d8d4078d557b9d048f50f3228b0c3ab9fcf
+    maintainers:
+    - name: Dobry-kot
+      url: https://github.com/fraima
+    name: yandex-cloud-controller
+    sources:
+    - https://github.com/fraima/helm-charts/tree/main/helm-chart-sources/yandex-cloud-controller
+    type: application
+    urls:
+    - https://helm.fraima.io/helm-chart-revisions/yandex-cloud-controller-0.0.6.tgz
+    version: 0.0.6
+  - apiVersion: v2
+    appVersion: 0.25.2
+    created: "2023-03-05T23:27:05.132315887+03:00"
     description: A Helm chart for management yandex cloud resources
     digest: 6f4d25f773a3ec72611f13295f2fe3f144630a6dcc341945ee828873143a1a5b
     maintainers:
@@ -40,7 +55,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: 0.25.2
-    created: "2023-03-05T23:26:06.253109931+03:00"
+    created: "2023-03-05T23:27:05.130092671+03:00"
     description: A Helm chart for management yandex cloud resources
     digest: 14d1d726539112365672ab48d1ec0211d50cdd119dd12e4dfee532af45599397
     maintainers:
@@ -56,7 +71,22 @@ entries:
   yandex-csi-controller:
   - apiVersion: v2
     appVersion: 0.9.12
-    created: "2023-03-05T23:26:06.268953184+03:00"
+    created: "2023-03-05T23:27:05.160067825+03:00"
+    description: A Helm chart for management yandex storages
+    digest: fb34a3d296b1c4ce3b51c48307ce13bdadaf4a15cdccbc886cb2e777be8e1522
+    maintainers:
+    - name: Dobry-kot
+      url: https://github.com/fraima
+    name: yandex-csi-controller
+    sources:
+    - https://github.com/fraima/helm-charts/tree/main/helm-chart-sources/yandex-csi-controller
+    type: application
+    urls:
+    - https://helm.fraima.io/helm-chart-revisions/yandex-csi-controller-0.0.6.tgz
+    version: 0.0.6
+  - apiVersion: v2
+    appVersion: 0.9.12
+    created: "2023-03-05T23:27:05.153697041+03:00"
     description: A Helm chart for management yandex storages
     digest: f1fa6de592fb6f9d0afcc4f945164bf9784149d3a9016003ef5aa3f2bd27856c
     maintainers:
@@ -71,7 +101,7 @@ entries:
     version: 0.0.5
   - apiVersion: v2
     appVersion: 0.9.12
-    created: "2023-03-05T23:26:06.264838106+03:00"
+    created: "2023-03-05T23:27:05.147330364+03:00"
     description: A Helm chart for management yandex storages
     digest: 649fb2822dfdc267ec6d4ef41460f4856a1cb316e80c7fc02fd1b9366c64953f
     maintainers:
@@ -86,7 +116,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: 0.9.12
-    created: "2023-03-05T23:26:06.260690457+03:00"
+    created: "2023-03-05T23:27:05.140925917+03:00"
     description: A Helm chart for management yandex storages
     digest: 3d5b83fb5cc03fcf2f7834083599384341b851de6e6963c3af7cbca896bd82c5
     maintainers:
@@ -99,4 +129,4 @@ entries:
     urls:
     - https://helm.fraima.io/helm-chart-revisions/yandex-csi-controller-0.0.3.tgz
     version: 0.0.3
-generated: "2023-03-05T23:26:06.237304257+03:00"
+generated: "2023-03-05T23:27:05.114241202+03:00"
