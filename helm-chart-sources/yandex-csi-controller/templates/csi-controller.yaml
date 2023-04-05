@@ -308,13 +308,13 @@ spec:
           - name: YANDEX_AUTH_KEYS
             valueFrom:
               secretKeyRef:
-                name: {{ .Values.provider.secret.name }}
+                name: {{ $.Values.provider.secret.name }}
                 key: serviceAccountJSON
 
           - name: YANDEX_FOLDER_ID
             valueFrom:
               secretKeyRef:
-                name: {{ .Values.provider.secret.name }}
+                name: {{ $.Values.provider.secret.name }}
                 key: folderID
 
         image: {{ $.Values.image.repository }}:{{ $.Values.image.tag | default (printf "v%s" $.Chart.AppVersion) }}
