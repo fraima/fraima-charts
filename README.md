@@ -17,7 +17,7 @@ helm repo index --url https://helm.fraima.io/ .
 
 ### Push the git repository on GitHub
 ```bash
-git add . && git commit -m “Initial commit” && git push origin master
+git add . && git commit -m "Initial commit" && git push origin main
 
 ```
 
