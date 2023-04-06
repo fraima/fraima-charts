@@ -139,7 +139,7 @@ spec:
             - name: YANDEX_AUTH_KEYS
               valueFrom:
                 secretKeyRef:
-                  name: {{ include "yandex-csi-controller.name" $ }}
+                  name: {{ $.Values.provider.secret.name }}
                   key: serviceAccountJSON
 
           image: {{ $.Values.image.repository }}:{{ $.Values.image.tag | default (printf "v%s" $.Chart.AppVersion) }}
