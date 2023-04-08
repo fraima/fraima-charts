@@ -2,8 +2,6 @@
 {{- $currentNamespace             := .Release.Namespace -}}
 {{- $cloudAuthSecret              := (lookup "v1" "Secret" $currentNamespace .Values.template.spec.provider.name) }}
 {{- $caPublic                     := (lookup "v1" "ConfigMap" $currentNamespace "kube-root-ca.crt") }}
-# {{- $users                        := (lookup "configuration.fraima.io/v1alpha1" "User" "default" "") }}
-# {{- $clusterInfo                  := (lookup "configuration.fraima.io/v1alpha1" "Fraima" "default" "") }}
 {{- $cloudAuthSecretData          := (get $cloudAuthSecret "data") | default dict }}
 {{- $caPublicData                 := (get $caPublic        "data") | default dict }}
 {{- $serviceAccountJSON           := printf "%s" $cloudAuthSecretData.serviceAccountJSON | b64dec }}
