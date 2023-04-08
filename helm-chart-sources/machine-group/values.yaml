@@ -15,11 +15,12 @@ strategy:
 selector:
   matchLabels: {}
 
+metadata:
+  labels: {}
+  nodeLabels: {}
+  cloudLabels: {}
+
 template:
-  metadata:
-    labels: {}
-    nodeLabels: {}
-    cloudLabels: {}
 
   spec:
     bootDisk:

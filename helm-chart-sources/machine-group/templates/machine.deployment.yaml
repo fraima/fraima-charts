@@ -13,7 +13,7 @@ spec:
   selector:
     matchLabels:
       instance-group: {{ .Release.Name }}
-    {{- with .Values.template.metadata.labels }}
+    {{- with .Values.metadata.labels }}
       {{- toYaml . | nindent 6 }}
     {{- end }}
 
@@ -29,7 +29,7 @@ spec:
     metadata:
       labels:
         instance-group: {{ .Release.Name }}
-      {{- with .Values.template.metadata.labels }}
+      {{- with .Values.metadata.labels }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
     spec:
@@ -43,7 +43,7 @@ spec:
       
       nodeTemplate:
         metadata:
-        {{- with .Values.template.metadata.nodeLabels }}
+        {{- with .Values.metadata.nodeLabels }}
             labels:
               {{- toYaml . | nindent 14 }}
         {{- end }}
