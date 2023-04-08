@@ -72,7 +72,7 @@ bootDiskSpec:
   typeID: {{ .typeID | default "network-hdd" }}
 {{- end }}
 
-{{- with .Values.template.metadata.cloudLabels }}
+{{- with .Values.metadata.cloudLabels }}
 labels:
   {{- toYaml . | nindent 2 }}
 {{- end }}
