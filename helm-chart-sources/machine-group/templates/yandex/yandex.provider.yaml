@@ -68,7 +68,7 @@ stringData:
             user:
               token: <<BOOTSTRAP_TOKEN>>
 
-      - path: ${main_path.base_kubernetes_path}/fraimactl/config.yaml
+      - path: /etc/kubernetes/fraimactl/config.yaml
         owner: root:root
         permissions: '0644'
         content: |
