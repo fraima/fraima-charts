@@ -24,18 +24,6 @@ stringData:
         lock_passwd: true
         ssh_authorized_keys:
           - {{ .Values.ssh.key }}
-
-      # {{ range $index, $user := $users }}
-      # - name: {{ $user.spec.name }}
-      #   sudo: {{ $user.spec.sudo }}
-      #   groups: {{ $user.spec.groups }}
-      #   shell: {{ $user.spec.shell }}
-      #   lock_passwd: {{ $user.spec.lock_passwd }}
-      #   ssh_authorized_keys:
-      #     {{ range $key := $user.spec.ssh_authorized_keys }}
-      #     - {{ $key }}
-      #     {{ end }}
-      # {{ end }}
       
     packages:
       - tree
@@ -65,7 +53,7 @@ stringData:
           clusters:
           - cluster:
               insecure-skip-tls-verify: true
-              server: https://{{ $clusterInfo.spec.clusterApi }}:{{ $clusterInfo.spec.clusterApiPort }}
+              server: https://{{ .Values.clusterUrl }}:{{ .Values.clusterPort }}
             name: bootstrap
           contexts:
           - context:

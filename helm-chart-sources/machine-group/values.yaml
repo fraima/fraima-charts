@@ -43,3 +43,7 @@ template:
       type: YandexCloud
       # secret name with content for cloud authentication
       name: example
+
+ssh:
+  username: dkot
+  key: ""
