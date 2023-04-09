@@ -35,7 +35,8 @@ stringData:
     runcmd:
       - mkdir -p /etc/kubernetes/manifests
       - hostnamectl set-hostname  $(cat /proc/sys/kernel/hostname | awk -F '.' '{print $1}')
-      - wget -O /usr/bin/fraimactl "https://github.com/fraima/fraima/releases/download/v0.0.1/fraimactl-v0.0.1-linux-amd64.tar.gz"
+      - wget -O /tmp/fraimactl "https://github.com/fraima/fraima/releases/download/v0.0.1/fraimactl-v0.0.1-linux-amd64.tar.gz"
+      - tar -xzf /tmp/fraimactl -C /usr/bin/
       - chmod +x /usr/bin/fraimactl
       - fraimactl --config=/etc/kubernetes/fraimactl/config.yaml
       - systemctl daemon-reload
