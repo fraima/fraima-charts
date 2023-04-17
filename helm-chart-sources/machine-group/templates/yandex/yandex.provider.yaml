@@ -1,6 +1,6 @@
-{{ if eq .Values.template.spec.provider.type "YandexCloud" }}
+{{ if eq .Values.provider.type "YandexCloud" }}
 {{- $currentNamespace             := .Release.Namespace -}}
-{{- $cloudAuthSecret              := (lookup "v1" "Secret" $currentNamespace .Values.template.spec.provider.name) }}
+{{- $cloudAuthSecret              := (lookup "v1" "Secret" $currentNamespace .Values.provider.name) }}
 {{- $caPublic                     := (lookup "v1" "ConfigMap" $currentNamespace "kube-root-ca.crt") }}
 {{- $cloudAuthSecretData          := (get $cloudAuthSecret "data") | default dict }}
 {{- $caPublicData                 := (get $caPublic        "data") | default dict }}

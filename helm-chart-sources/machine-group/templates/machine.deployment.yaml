@@ -1,4 +1,4 @@
-{{ if eq .Values.template.spec.provider.type "YandexCloud" }}
+{{ if eq .Values.provider.type "YandexCloud" }}
 ---
 apiVersion: machine.sapcloud.io/v1alpha1
 kind: MachineDeployment
@@ -34,7 +34,7 @@ spec:
       {{- end }}
     spec:
       class:
-        {{- with .Values.template.spec.provider }}
+        {{- with .Values.provider }}
         {{- if eq .type "YandexCloud" }}
         kind: YandexMachineClass
         {{- end }}

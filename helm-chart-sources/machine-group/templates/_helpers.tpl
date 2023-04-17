@@ -64,7 +64,7 @@ Create the name of the service account to use
 
 {{- define "yandex.machine-class.spec" -}}
 
-{{- with .Values.template.spec.bootDisk  }}
+{{- with .Values.bootDisk  }}
 bootDiskSpec:
   autoDelete: {{ .autoDelete | default true }}
   imageID: {{ .imageID | default "fd8ingbofbh3j5h7i8ll" }}
@@ -78,7 +78,7 @@ labels:
 {{- end }}
 
 networkInterfaceSpecs:
-{{- with .Values.template.spec.networkInterfaces  }}
+{{- with .Values.networkInterfaces  }}
 - assignPublicIPAddress: {{ .nat | default true }}
   subnetID: {{ .subnetID }}
 networkType: {{ .networkType | default "STANDARD" }}
@@ -88,7 +88,7 @@ zoneID: {{ .zoneID }}
 
 platformID: standard-v3
 
-{{- with .Values.template.spec.resources  }}
+{{- with .Values.resources  }}
 resourcesSpec:
   coreFraction: {{ .coreFraction | default 20 }}
   cores: {{ .cores | default 4 }}
