@@ -1,11 +1,26 @@
 apiVersion: v1
 entries:
+  bcloud-openshift-mco:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-07-13T23:25:10.310081685+03:00"
+    dependencies:
+    - name: appSpec
+      repository: file://../../../appspec/0.1.0/appspec
+      version: '*'
+    description: A Helm chart for Kubernetes
+    digest: 10229d80665ebe1d34470452ef7cb34c1a38aff79954892c6e70f83df2b9167e
+    name: bcloud-openshift-mco
+    type: application
+    urls:
+    - https://helm.fraima.io/helm-chart-revisions/bcloud-openshift-mco-0.1.0.tgz
+    version: 0.1.0
   cluster-machine-controller:
   - apiVersion: v2
     appVersion: 0.36.0
-    created: "2023-04-17T03:07:36.097352273+03:00"
+    created: "2024-07-13T23:25:10.310306476+03:00"
     description: A Helm chart for Kubernetes
-    digest: 195ed61b3e58baf43694d8dcc6368af94c1d8b84035c33fe47f19a71a4521ddb
+    digest: e92761e0133dcf5406b4e1ae37e9ae6ba526a970b1b9c8f110c8c7eb98536034
     name: cluster-machine-controller
     type: application
     urls:
@@ -14,9 +29,9 @@ entries:
   machine-group:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-04-17T03:07:36.111938271+03:00"
+    created: "2024-07-13T23:25:10.311456962+03:00"
     description: machine configuration tool for kubernetes
-    digest: d6797be31fcaf9391a2ff018feaaa48455a1278899bfff62096f56c3fc0477e8
+    digest: 1b6f4df36c3aba22b291930e90686c6cc64ff6e5f8adeccc54f59f36656154ab
     name: machine-group
     type: application
     urls:
@@ -24,7 +39,7 @@ entries:
     version: 0.1.14
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-04-17T03:07:36.108936735+03:00"
+    created: "2024-07-13T23:25:10.311209881+03:00"
     description: machine configuration tool for kubernetes
     digest: 1f875cea1e00788cfca0cedcb59778598ecf877998a4a1fa0ad1edcab6cd61c4
     name: machine-group
@@ -34,7 +49,7 @@ entries:
     version: 0.1.13
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-04-17T03:07:36.104611053+03:00"
+    created: "2024-07-13T23:25:10.31098738+03:00"
     description: machine configuration tool for kubernetes
     digest: c0887d8744ef6404c0814ba357f4599b8eead89b7c01498c63145b2f4bfcfbdd
     name: machine-group
@@ -44,7 +59,7 @@ entries:
     version: 0.1.12
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-04-17T03:07:36.101876988+03:00"
+    created: "2024-07-13T23:25:10.310769928+03:00"
     description: machine configuration tool for kubernetes
     digest: 8f1f0d1b25cc7d8d389aa1dc0ec3a532882cad2f9cf9367ee58b6646d0749332
     name: machine-group
@@ -54,7 +69,7 @@ entries:
     version: 0.1.11
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-04-17T03:07:36.099769431+03:00"
+    created: "2024-07-13T23:25:10.310541927+03:00"
     description: machine configuration tool for kubernetes
     digest: 0833e5052062876189242bab77f0e32df42d82d1cde5df3e90af3c78dca1a8c4
     name: machine-group
@@ -64,7 +79,7 @@ entries:
     version: 0.1.10
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-04-17T03:07:36.122111071+03:00"
+    created: "2024-07-13T23:25:10.313109338+03:00"
     description: machine configuration tool for kubernetes
     digest: 8e3d90e3ce8831ff013016f8c11b5d32ad7eb20543b78ea492e4c4c8be596291
     name: machine-group
@@ -74,7 +89,7 @@ entries:
     version: 0.1.9
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-04-17T03:07:36.120017+03:00"
+    created: "2024-07-13T23:25:10.312876857+03:00"
     description: machine configuration tool for kubernetes
     digest: 5e4f4ff7ebbbaa870bab8dbb4958b2c2b00c608504e0345ac3f18f59e8458d9f
     name: machine-group
@@ -84,7 +99,7 @@ entries:
     version: 0.1.8
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-04-17T03:07:36.117943617+03:00"
+    created: "2024-07-13T23:25:10.312591278+03:00"
     description: machine configuration tool for kubernetes
     digest: ada9619591cc9fc8de972076f1f796890529d8c6547be9d7bb572f310ef0f347
     name: machine-group
@@ -94,7 +109,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-04-17T03:07:36.11590523+03:00"
+    created: "2024-07-13T23:25:10.31227286+03:00"
     description: machine configuration tool for kubernetes
     digest: 4c5d8fb5fd2d63471f1631c63ff32c7f3af14a66254a78488de72385490261f7
     name: machine-group
@@ -104,7 +119,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-04-17T03:07:36.11389207+03:00"
+    created: "2024-07-13T23:25:10.311683513+03:00"
     description: machine configuration tool for kubernetes
     digest: b4b95804f6cad4fcc274c4e0695851838476f9ac75356814b316afef2cba64ad
     name: machine-group
@@ -115,9 +130,9 @@ entries:
   yandex-cloud-controller:
   - apiVersion: v2
     appVersion: 0.26.1
-    created: "2023-04-17T03:07:36.133472185+03:00"
+    created: "2024-07-13T23:25:10.314267294+03:00"
     description: A Helm chart for management yandex cloud resources
-    digest: 2f4532607da4af99fe8c19f4ad896290ecf022c58551791e5b63471b40ab0b6e
+    digest: 262137fe8badb51f5c2b9e622e9897119a32b245c074dc01f30e854723441a26
     maintainers:
     - name: Dobry-kot
       url: https://github.com/fraima
@@ -130,7 +145,7 @@ entries:
     version: 0.0.8
   - apiVersion: v2
     appVersion: 0.25.2
-    created: "2023-04-17T03:07:36.131262686+03:00"
+    created: "2024-07-13T23:25:10.314041753+03:00"
     description: A Helm chart for management yandex cloud resources
     digest: 5045db638a6f6ddb85db6c052f1af002d4a3c44b857c25e72734a4cd7c385191
     maintainers:
@@ -145,7 +160,7 @@ entries:
     version: 0.0.7
   - apiVersion: v2
     appVersion: 0.25.2
-    created: "2023-04-17T03:07:36.129052986+03:00"
+    created: "2024-07-13T23:25:10.313820341+03:00"
     description: A Helm chart for management yandex cloud resources
     digest: 1abd6050ed279fac05ee88e0e0824d8d4078d557b9d048f50f3228b0c3ab9fcf
     maintainers:
@@ -160,7 +175,7 @@ entries:
     version: 0.0.6
   - apiVersion: v2
     appVersion: 0.25.2
-    created: "2023-04-17T03:07:36.126804004+03:00"
+    created: "2024-07-13T23:25:10.31358865+03:00"
     description: A Helm chart for management yandex cloud resources
     digest: 6f4d25f773a3ec72611f13295f2fe3f144630a6dcc341945ee828873143a1a5b
     maintainers:
@@ -175,7 +190,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: 0.25.2
-    created: "2023-04-17T03:07:36.124584897+03:00"
+    created: "2024-07-13T23:25:10.313353279+03:00"
     description: A Helm chart for management yandex cloud resources
     digest: 14d1d726539112365672ab48d1ec0211d50cdd119dd12e4dfee532af45599397
     maintainers:
@@ -191,9 +206,9 @@ entries:
   yandex-csi-controller:
   - apiVersion: v2
     appVersion: 0.9.12
-    created: "2023-04-17T03:07:36.167061495+03:00"
+    created: "2024-07-13T23:25:10.31776399+03:00"
     description: A Helm chart for management yandex storages
-    digest: cd83fce67aef8e6625890d079dd7c169d27da325ecad9c1bb775e71a10fff800
+    digest: c8d77d87d18bfc66b5abb15249bb1bb7558e4ecc1ddc3f2614e80b10123bd876
     maintainers:
     - name: Dobry-kot
       url: https://github.com/fraima
@@ -206,7 +221,7 @@ entries:
     version: 0.0.8
   - apiVersion: v2
     appVersion: 0.9.12
-    created: "2023-04-17T03:07:36.160722312+03:00"
+    created: "2024-07-13T23:25:10.316502138+03:00"
     description: A Helm chart for management yandex storages
     digest: cc1d5ec1bafe4fa5c8eae100dd42a8f7221066d94139bc301fd3428bdfcaebd3
     maintainers:
@@ -221,7 +236,7 @@ entries:
     version: 0.0.7
   - apiVersion: v2
     appVersion: 0.9.12
-    created: "2023-04-17T03:07:36.154379652+03:00"
+    created: "2024-07-13T23:25:10.316000017+03:00"
     description: A Helm chart for management yandex storages
     digest: fb34a3d296b1c4ce3b51c48307ce13bdadaf4a15cdccbc886cb2e777be8e1522
     maintainers:
@@ -236,7 +251,7 @@ entries:
     version: 0.0.6
   - apiVersion: v2
     appVersion: 0.9.12
-    created: "2023-04-17T03:07:36.14800363+03:00"
+    created: "2024-07-13T23:25:10.315560214+03:00"
     description: A Helm chart for management yandex storages
     digest: f1fa6de592fb6f9d0afcc4f945164bf9784149d3a9016003ef5aa3f2bd27856c
     maintainers:
@@ -251,7 +266,7 @@ entries:
     version: 0.0.5
   - apiVersion: v2
     appVersion: 0.9.12
-    created: "2023-04-17T03:07:36.14127675+03:00"
+    created: "2024-07-13T23:25:10.315161479+03:00"
     description: A Helm chart for management yandex storages
     digest: 649fb2822dfdc267ec6d4ef41460f4856a1cb316e80c7fc02fd1b9366c64953f
     maintainers:
@@ -266,7 +281,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: 0.9.12
-    created: "2023-04-17T03:07:36.137273292+03:00"
+    created: "2024-07-13T23:25:10.314650449+03:00"
     description: A Helm chart for management yandex storages
     digest: 3d5b83fb5cc03fcf2f7834083599384341b851de6e6963c3af7cbca896bd82c5
     maintainers:
@@ -279,4 +294,4 @@ entries:
     urls:
     - https://helm.fraima.io/helm-chart-revisions/yandex-csi-controller-0.0.3.tgz
     version: 0.0.3
-generated: "2023-04-17T03:07:36.086409124+03:00"
+generated: "2024-07-13T23:25:10.308201747+03:00"
