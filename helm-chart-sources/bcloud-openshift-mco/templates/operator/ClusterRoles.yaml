@@ -10,28 +10,19 @@ rules:
   - apiGroups:
     - machineconfiguration.openshift.io
     resources:
-    - containerruntimeconfigs
-    - controllerconfigs
-    - kubeletconfigs
-    - machineconfigpools
+    - '*'
     verbs:
-    - get
-    - list
-    - watch
+    - '*'
   - apiGroups:
     - config.openshift.io
     resources:
-    - infrastructures
+    - '*'
     verbs:
-    - get
-    - list
-    - watch
+    - '*'
   - apiGroups:
     - ""
     resources:
     - configmaps
     verbs:
-    - get
-    - list
-    - watch
+    - '*'
 {{- end }}

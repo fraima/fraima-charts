@@ -12,27 +12,7 @@ appSpec:
         - effect: NoSchedule
           key: node-role.kubernetes.io/control-plane
           operator: Exists
-        - effect: NoSchedule
-          key: node-role.kubernetes.io/master
-          operator: Exists
-        - effect: NoExecute
-          key: node.kubernetes.io/not-ready
-          operator: Exists
-        - effect: NoExecute
-          key: node.kubernetes.io/unreachable
-          operator: Exists
-        - effect: NoSchedule
-          key: node.kubernetes.io/disk-pressure
-          operator: Exists
-        - effect: NoSchedule
-          key: node.kubernetes.io/memory-pressure
-          operator: Exists
-        - effect: NoSchedule
-          key: node.kubernetes.io/pid-pressure
-          operator: Exists
-        - effect: NoSchedule
-          key: node.kubernetes.io/unschedulable
-          operator: Exists
+
 
       containers:
         machineConfigController:
@@ -66,30 +46,7 @@ appSpec:
         kubernetes.io/os: linux
 
       tolerations:
-        - effect: NoSchedule
-          key: node-role.kubernetes.io/control-plane
-          operator: Exists
-        - effect: NoSchedule
-          key: node-role.kubernetes.io/master
-          operator: Exists
-        - effect: NoExecute
-          key: node.kubernetes.io/not-ready
-          operator: Exists
-        - effect: NoExecute
-          key: node.kubernetes.io/unreachable
-          operator: Exists
-        - effect: NoSchedule
-          key: node.kubernetes.io/disk-pressure
-          operator: Exists
-        - effect: NoSchedule
-          key: node.kubernetes.io/memory-pressure
-          operator: Exists
-        - effect: NoSchedule
-          key: node.kubernetes.io/pid-pressure
-          operator: Exists
-        - effect: NoSchedule
-          key: node.kubernetes.io/unschedulable
-          operator: Exists
+        - operator: Exists
 
       volumes:
         rootfs:
@@ -151,27 +108,6 @@ appSpec:
       tolerations:
         - effect: NoSchedule
           key: node-role.kubernetes.io/control-plane
-          operator: Exists
-        - effect: NoSchedule
-          key: node-role.kubernetes.io/master
-          operator: Exists
-        - effect: NoExecute
-          key: node.kubernetes.io/not-ready
-          operator: Exists
-        - effect: NoExecute
-          key: node.kubernetes.io/unreachable
-          operator: Exists
-        - effect: NoSchedule
-          key: node.kubernetes.io/disk-pressure
-          operator: Exists
-        - effect: NoSchedule
-          key: node.kubernetes.io/memory-pressure
-          operator: Exists
-        - effect: NoSchedule
-          key: node.kubernetes.io/pid-pressure
-          operator: Exists
-        - effect: NoSchedule
-          key: node.kubernetes.io/unschedulable
           operator: Exists
 
       volumes:

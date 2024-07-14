@@ -30,35 +30,13 @@ rules:
   - apiGroups:
     - config.openshift.io
     resources:
-    - images
-    - clusterversions
-    - featuregates
-    - nodes
-    - nodes/status
+    - '*'
     verbs:
     - '*'
   - apiGroups:
-    - config.openshift.io
-    resources:
-    - schedulers
-    - apiservers
-    - infrastructures
-    verbs:
-    - get
-    - list
-    - watch
-  - apiGroups:
     - operator.openshift.io
     resources:
-    - imagecontentsourcepolicies
-    verbs:
-    - get
-    - list
-    - watch
-  - apiGroups:
-    - operator.openshift.io
-    resources:
-    - etcds
+    - '*'
     verbs:
     - get
     - list
